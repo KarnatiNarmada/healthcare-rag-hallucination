@@ -15,16 +15,15 @@ import argparse, json, re
 from pathlib import Path
 
 try:
-    import tiktoken
-    _enc = tiktoken.get_encoding("cl100k_base")
+    from transformers import AutoTokenizer
+    _tok = AutoTokenizer.from_pretrained("BAAI/bge-small-en-v1.5")
     def count_tokens(text):
-        return len(_enc.encode(text))
-    TOKENIZER = "tiktoken cl100k_base"
-except Exception:                        # no tiktoken or no internet for its files
+        return len(_tok.encode(text, add_special_tokens=False))
+    TOKENIZER = "BAAI/bge-small-en-v1.5 tokenizer"
+except Exception:
     def count_tokens(text):
-        return int(len(text.split()) * 1.3)   # rough estimate
-    TOKENIZER = "word-count estimate (x1.3)"
-
+        return int(len(text.split()) * 1.6)          # rough estimate, medical text splits a lot
+    TOKENIZER = "word-count estimate (x1.6)"
 
 def clean(text):
     text = text.replace("\u00ad", "")                  # soft hyphens
@@ -60,21 +59,23 @@ def chunk_text(text, min_tokens, max_tokens, overlap):
         t = count_tokens(u)
         if cur and cur_tok + t > max_tokens:
             chunks.append(cur)
-            cur = cur[-overlap:] if overlap else []          # repeat last sentence(s)
-            cur_tok = sum(count_tokens(x) for x in cur)
+            tail = cur[-overlap:] if overlap else []         # sentence(s) to repeat
+            tail_tok = sum(count_tokens(x) for x in tail)
+            if tail_tok + t > max_tokens:                    # repeating would overflow, so skip it
+                tail, tail_tok = [], 0
+            cur, cur_tok = tail, tail_tok
         cur.append(u); cur_tok += t
     if cur:
         # a tiny last piece is merged into the previous chunk if it fits
         if chunks and cur_tok < min_tokens // 2:
             prev_tok = sum(count_tokens(x) for x in chunks[-1])
             new = [x for x in cur if x not in chunks[-1]]
-            if prev_tok + sum(count_tokens(x) for x in new) <= max_tokens * 1.15:
+            if prev_tok + sum(count_tokens(x) for x in new) <= max_tokens * 1.05:
                 chunks[-1] = chunks[-1] + new
                 cur = []
         if cur:
             chunks.append(cur)
     return [" ".join(c) for c in chunks]
-
 
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
@@ -85,7 +86,7 @@ def main():
     ap.add_argument("--inp", default="data/labels/sections.jsonl")
     ap.add_argument("--out", default="data/chunks.jsonl")
     ap.add_argument("--min-tokens", type=int, default=300)
-    ap.add_argument("--max-tokens", type=int, default=500)
+    ap.add_argument("--max-tokens", type=int, default=450)
     ap.add_argument("--overlap", type=int, default=1, help="sentences repeated between chunks")
     args = ap.parse_args()
 
