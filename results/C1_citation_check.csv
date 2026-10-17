@@ -1,0 +1,78 @@
+q_id,evidence_case,status,spans,not_found,not_in_cited_chunk,cited_not_retrieved,first_unmatched
+JP002,partial,text_not_in_retrieved_chunks,1,1,0,0,"warfarin sodium"" is the type of drug, and it does not have a brand name mentioned in the passages"
+JP003,answerable,ok,1,0,0,0,
+JP005,answerable,ok,1,0,0,0,
+JP006,partial,ok,1,0,0,0,
+JP007,unanswerable,cites_unretrieved_chunk,2,0,2,1,
+JP008,answerable,ok,1,0,0,0,
+JP011,answerable,ok,1,0,0,0,
+JP013,answerable,ok,1,0,0,0,
+JP015,answerable,ok,1,0,0,0,
+JP016,partial,text_not_in_retrieved_chunks,2,2,0,0,"according to the passage, the recommended duration of treatment for patients undergoing knee replacement surgery is 12 days"
+JP018,answerable,ok,1,0,0,0,
+JP019,partial,text_not_in_retrieved_chunks,2,2,0,0,aspirin and other antiplatelet agents increase the risk of bleeding
+JP021,answerable,ok,1,0,0,0,
+JP022,partial,text_not_in_retrieved_chunks,1,1,0,1,clopidogrel is a p2y12 platelet inhibitor
+JP023,answerable,text_not_in_retrieved_chunks,1,1,0,0,"seen on peripheral smear), neurological findings, renal dysfunction, and fever .]"
+JP025,answerable,ok,1,0,0,0,
+JP028,answerable,ok,1,0,0,0,
+JP031,answerable,ok,1,0,0,0,
+JP032,partial,text_not_in_retrieved_chunks,2,1,0,0,there is no mention of digoxin bringing the heart back to a normal rhythm in the provided passages
+JP033,answerable,ok,1,0,0,0,
+JP035,answerable,ok,0,0,0,0,
+JP036,partial,ok,1,0,0,0,
+JP038,answerable,ok,1,0,0,0,
+JP041,answerable,text_not_in_retrieved_chunks,2,1,0,0,levothyroxine sodium tablets are also indicated as an adjunct to surgery and radioiodine therapy in the management of thyrotropin-dependent well-diffe
+JP042,partial,ok,1,0,0,0,
+JP043,answerable,text_not_in_retrieved_chunks,1,1,0,0,[13e03769-adverse_reactions-01] (levothyroxine - adverse reactions)
+JP045,answerable,cites_unretrieved_chunk,1,0,1,1,
+JP048,answerable,text_not_in_retrieved_chunks,1,1,0,0,"administer levothyroxine sodium tablets at least 4 hours apart from phosphate binders (e.g., calcium carbonate, ferrous sulfate, sevelamer, lanthanum)"
+JP051,answerable,ok,1,0,0,0,
+JP052,partial,text_not_in_retrieved_chunks,1,1,0,0,simvastatin is an hmg-coa reductase inhibitor
+JP053,answerable,ok,1,0,0,0,
+JP055,answerable,ok,1,0,0,0,
+JP056,partial,text_not_in_retrieved_chunks,2,2,0,0,the maximum recommended dose of simvastatin is 40 mg once daily
+JP057,unanswerable,text_not_in_retrieved_chunks,1,1,0,1,take simvastatin with or without food; the bioavailability of simvastatin is similar whether taken with or without food
+JP058,answerable,ok,4,0,0,0,
+JP059,partial,ok,2,0,0,0,
+JP061,answerable,ok,1,0,1,0,
+JP063,answerable,ok,1,0,0,0,
+JP065,answerable,ok,1,0,0,0,
+JP066,partial,text_not_in_retrieved_chunks,2,2,0,0,"the usual starting dose of metoprolol for high blood pressure is 100 mg daily, in single or divided doses"
+JP067,unanswerable,ok,1,0,0,0,
+JP068,answerable,ok,1,0,1,0,
+JP069,partial,text_not_in_retrieved_chunks,1,1,0,0,"if clonidine and a beta-blocker, such as metoprolol, are coadministered, withdraw the beta-blocker several days before the gradual withdrawal of cloni"
+JP071,answerable,ok,2,0,0,0,
+JP072,partial,ok,1,0,0,0,
+JP073,answerable,text_not_in_retrieved_chunks,1,1,0,0,[persistent dry cough (with an incidence of a few percent) has been associated with ace-inhibitor use and in practice can be a cause of discontinuatio
+JP075,answerable,text_not_in_retrieved_chunks,1,1,0,0,the maximum daily dose of losartan for high blood pressure in adults is 100 mg once daily
+JP079,partial,text_not_in_retrieved_chunks,4,2,0,0,"there is no specific information regarding the management of hyperkalemia in patients with renal impairment or those on dialysis. however, in patients"
+N001,answerable,ok,1,0,0,0,
+N002,partial,ok,1,0,0,0,
+N003,answerable,text_not_in_retrieved_chunks,1,1,0,0,the most common adverse reactions (>5%) of metformin hydrochloride extended-release tablets are: * diarrhea * nausea/vomiting * flatulence * asthenia 
+N005,answerable,text_not_in_retrieved_chunks,1,1,0,0,"the maximum daily dose of metformin extended-release is 2,000 mg"
+N006,partial,text_not_in_retrieved_chunks,2,2,0,0,the starting dose of metformin hydrochloride extended-release is 500 mg orally once daily with the evening meal
+N008,answerable,text_not_in_retrieved_chunks,1,1,0,0,[concomitant use of these drugs with metformin hydrochloride extended-release tablets may increase the risk for lactic acidosis
+N009,partial,ok,1,0,0,0,
+N011,answerable,text_not_in_retrieved_chunks,3,1,0,0,"lisinopril is indicated for the treatment of hypertension in adults and pediatric patients 6 years of age and older, to lower blood pressure, and for "
+N012,partial,text_not_in_retrieved_chunks,1,1,0,0,"lisinopril is used for the treatment of hypertension in adults and pediatric patients 6 years of age and older, as well as for the treatment of acute "
+N013,answerable,ok,1,0,0,0,
+N015,answerable,ok,1,0,0,0,
+N016,partial,text_not_in_retrieved_chunks,2,2,0,0,the maximum dose of lisinopril for heart failure is 40 mg daily
+N018,answerable,ok,1,0,0,0,
+N019,partial,text_not_in_retrieved_chunks,1,1,0,1,"it is not recommended to co-administer lithium with ace inhibitors, including lisinopril, because lithium toxicity has been reported in patients recei"
+N021,answerable,cites_unretrieved_chunk,1,0,1,1,
+N022,partial,text_not_in_retrieved_chunks,1,1,0,0,atorvastatin is an hmg-coa reductase inhibitor (statin)
+N023,answerable,text_not_in_retrieved_chunks,1,1,0,0,"the most common adverse reactions (incidence ≥ 5%) are nasopharyngitis, arthralgia, diarrhea, pain in extremity, and urinary tract infection"
+N025,answerable,text_not_in_retrieved_chunks,1,1,0,0,the recommended starting dosage is 10 or 20 mg once daily
+N026,partial,ok,2,0,0,0,
+N028,answerable,ok,1,0,0,0,
+N029,partial,text_not_in_retrieved_chunks,6,1,5,2,2.3 monitoring and laboratory tests monitor serum digoxin levels regularly
+N031,answerable,ok,1,0,0,0,
+N032,partial,ok,0,0,0,0,
+N033,answerable,ok,1,0,0,0,
+N035,answerable,ok,1,0,0,0,
+N036,partial,ok,1,0,0,0,
+N038,answerable,ok,1,0,0,0,
+N039,partial,ok,1,0,0,0,
+JP076,partial,text_not_in_retrieved_chunks,2,2,0,0,"for patients with mild-to-moderate hepatic impairment, the recommended starting dose of losartan potassium is 25 mg once daily"

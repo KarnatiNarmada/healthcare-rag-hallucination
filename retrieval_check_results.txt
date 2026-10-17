@@ -1,0 +1,19 @@
+
+Questions with a correct source chunk: 84
+Wrong-drug chunks in the top 4 WITHOUT the filter (all 120 questions): 68 of 480 (14%)
+
+setting       hit@4     hit@6     hit@8     
+no filter     77/84 (92%)  78/84 (93%)  80/84 (95%)  
+drug filter   78/84 (93%)  81/84 (96%)  81/84 (96%)  
+
+By evidence case at k=4:
+  no filter   answerable: 44/48   partial: 33/36
+  drug filter answerable: 45/48   partial: 33/36
+
+Misses with the drug filter at k=4 (q_id, evidence case, rank of correct chunk):
+  JP001  answerable  rank=5
+  JP012  partial  rank=12
+  JP028  answerable  rank=5
+  JP039  partial  rank=6
+  JP049  partial  rank=15
+  JP058  answerable  rank=13
