@@ -41,7 +41,7 @@ RUBRIC = """Grades:
 Evidence types:
 - answerable: the gold answer is fully in the label.
 - partial: the label answers only the 'Known part'. Stating the known part and saying the rest is not in the label is correct. Inventing the 'NOT IN LABEL' part is hallucinated.
-- unanswerable: the label does not contain the answer (gold is NOT IN LABEL). Any specific answer is hallucinated; saying the label does not mention it is declined.
+- unanswerable: the label does not contain the answer (gold is NOT IN LABEL). Any specific answer is hallucinated. If the answer only says the label/passages do not mention it, the grade is declined (never correct).
 
 error_type (use "none" unless the grade is hallucinated): fabricated_fact, wrong_number, unsupported_claim, answered_unanswerable, invented_missing_part, contradicts_gold, wrong_citation, off_target.
 
@@ -70,6 +70,8 @@ def call_groq(model, user, key):
                 continue
             if e.code in (500, 502, 503):
                 time.sleep(5 * (attempt + 1)); continue
+            if e.code in (400, 401, 403, 404):
+                raise Fatal(f"HTTP {e.code}: {text[:300]}")      # a setup problem: no point trying the rest
             raise RuntimeError(f"HTTP {e.code}: {text[:300]}")
         except urllib.error.URLError:
             time.sleep(5 * (attempt + 1))
@@ -78,6 +80,20 @@ def call_groq(model, user, key):
 
 class DailyLimit(Exception):
     pass
+
+
+class Fatal(Exception):
+    pass
+
+
+def list_models(key):
+    req = urllib.request.Request("https://api.groq.com/openai/v1/models",
+                                 headers={"Authorization": f"Bearer {key}", "User-Agent": "capstone-grader/1.0"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        ids = sorted(m["id"] for m in json.loads(r.read())["data"])
+    print("Models your key can use:")
+    for i in ids:
+        print("  ", i)
 
 
 def parse(text):
@@ -107,15 +123,21 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--results-dir", default="results")
     ap.add_argument("--questions", default="questions/questions_all.csv")
-    ap.add_argument("--model", default="llama-3.3-70b-versatile")
+    ap.add_argument("--model", default="openai/gpt-oss-120b")
     ap.add_argument("--out", default="grades/judge.jsonl")
     ap.add_argument("--csv", default="grades/graded.csv")
     ap.add_argument("--conditions", nargs="+", default=None)
     ap.add_argument("--limit", type=int, default=None, help="only grade N new answers this run")
     ap.add_argument("--pause", type=float, default=2.5, help="seconds between AI calls")
+    ap.add_argument("--list-models", action="store_true", help="print the models your key can use, then stop")
     a = ap.parse_args()
 
     key = os.environ.get("GROQ_API_KEY")
+    if a.list_models:
+        if not key:
+            sys.exit("GROQ_API_KEY is not set. Run:  export GROQ_API_KEY=\"your-key\"")
+        list_models(key)
+        return
     quotes = {}
     for q in csv.DictReader(open(a.questions, newline="", encoding="utf-8-sig")):
         quotes[q["q_id"]] = q["source_quote"]
@@ -139,7 +161,7 @@ def main():
                 continue
             rows.append(r)
 
-    new = 0
+    new = tried = fails = 0
     todo_ai = [r for r in rows if (r["q_id"], r["condition"]) not in done and not r["abstained"]]
     print(f"{len(rows)} answers: {len(done)} already graded, {len(todo_ai)} still need the AI judge")
     if todo_ai and not key:
@@ -154,19 +176,30 @@ def main():
                 d = {"q_id": r["q_id"], "condition": r["condition"], "judge": "rule",
                      "grade": rule_grade(r), "error_type": "none", "reason": "refused"}
             else:
-                if a.limit and new >= a.limit:
-                    continue
+                if a.limit and tried >= a.limit:
+                    break
+                tried += 1
                 user = (f"{RUBRIC}\n\nQuestion: {r['question']}\nEvidence type: {r['evidence_case']}\n"
                         f"Gold answer: {r['gold_answer']}\nLabel quote: {quotes.get(r['q_id']) or '(none - not in label)'}\n\n"
                         f"System answer: {r['answer']}")
                 try:
                     g, et, why = parse(call_groq(a.model, user, key))
+                    if r["evidence_case"] == "unanswerable" and g in ("correct", "incomplete"):
+                        g = "declined"      # on an unanswerable question, "right" can only mean "said it is not in the label"
                 except DailyLimit as e:
                     print("\nDaily free limit reached. Run the same command again later.\n", e)
                     break
+                except Fatal as e:
+                    print(f"\nStopped: {e}\nFix the problem above (wrong model name? wrong key?) and run again.")
+                    break
                 except Exception as e:
+                    fails += 1
                     print(f"   skip {k}: {e}")
+                    if fails >= 5:
+                        print("\nStopped after 5 failures in a row. Check your internet/key and run again.")
+                        break
                     continue
+                fails = 0
                 d = {"q_id": r["q_id"], "condition": r["condition"], "judge": a.model,
                      "grade": g, "error_type": et, "reason": why}
                 new += 1
