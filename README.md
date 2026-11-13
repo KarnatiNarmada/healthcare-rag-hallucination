@@ -82,6 +82,7 @@ python eval/similarity.py       # Similarity Index: F1, ROUGE-L, embedding cosin
 python eval/rq4_highrisk.py     # High and Critical questions only: does the risk gate help, and what does it cost?
 python eval/error_analysis.py   # which hallucinations remain and which get through every safeguard
 python eval/retrieval_check.py  # how often the right passage is retrieved
+python eval/make_figures.py     # report-ready figures (PNG) -> docs/figures/
 ```
 
 ## 5. The app
@@ -131,6 +132,7 @@ Share of answers graded hallucinated, with the AI judge checked against a human 
 ```
 app/        Streamlit app (ask a question, results)
 data/       drug list, downloaded labels, chunks, index
+docs/       report figures (docs/figures/)
 eval/       experiment, grading and analysis scripts
 grades/     graded answers (graded.csv) and human grading sheets
 questions/  the 200 test questions and gold answers
