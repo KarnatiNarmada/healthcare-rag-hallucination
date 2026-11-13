@@ -27,6 +27,10 @@ severity_gold,Critical,C6,60,4,0.0667,0.0262,0.1593,0.4,0.75
 severity_gold,High,C6,60,3,0.05,0.0171,0.137,0.4833,0.7333
 severity_gold,Low,C6,40,6,0.15,0.0706,0.2907,0.425,0.325
 severity_gold,Moderate,C6,39,5,0.1282,0.056,0.2671,0.7179,0.5897
+severity_gold,Critical,C6G,61,2,0.0328,0.009,0.1119,0.4098,0.7705
+severity_gold,High,C6G,59,3,0.0508,0.0174,0.1392,0.4746,0.7458
+severity_gold,Low,C6G,40,6,0.15,0.0706,0.2907,0.4,0.3
+severity_gold,Moderate,C6G,39,5,0.1282,0.056,0.2671,0.7179,0.5897
 question_type,dosage,C0,60,11,0.1833,0.1056,0.2992,0.4333,0.0
 question_type,general_info,C0,40,18,0.45,0.3071,0.6017,0.5,0.0
 question_type,interactions,C0,60,27,0.45,0.3309,0.5751,0.2333,0.0
@@ -55,6 +59,10 @@ question_type,dosage,C6,59,3,0.0508,0.0174,0.1392,0.4746,0.7288
 question_type,general_info,C6,40,6,0.15,0.0706,0.2907,0.425,0.325
 question_type,interactions,C6,60,3,0.05,0.0171,0.137,0.4167,0.7667
 question_type,side_effects,C6,40,6,0.15,0.0706,0.2907,0.7,0.575
+question_type,dosage,C6G,59,3,0.0508,0.0174,0.1392,0.4746,0.7458
+question_type,general_info,C6G,40,6,0.15,0.0706,0.2907,0.4,0.3
+question_type,interactions,C6G,60,2,0.0333,0.0092,0.1136,0.4167,0.7667
+question_type,side_effects,C6G,40,5,0.125,0.0546,0.2611,0.7,0.6
 evidence_case,answerable,C0,80,22,0.275,0.1892,0.3814,0.575,0.0
 evidence_case,partial,C0,60,30,0.5,0.3773,0.6227,0.4333,0.0
 evidence_case,unanswerable,C0,60,14,0.2333,0.1444,0.3544,0.0,0.0
@@ -76,3 +84,6 @@ evidence_case,unanswerable,C5,60,0,0.0,0.0,0.0602,1.0,1.0
 evidence_case,answerable,C6,80,16,0.2,0.127,0.3005,0.3875,0.2625
 evidence_case,partial,C6,59,2,0.0339,0.0093,0.1154,0.1186,0.7458
 evidence_case,unanswerable,C6,60,0,0.0,0.0,0.0602,1.0,1.0
+evidence_case,answerable,C6G,80,15,0.1875,0.1171,0.2866,0.375,0.2875
+evidence_case,partial,C6G,59,1,0.0169,0.003,0.09,0.1186,0.7288
+evidence_case,unanswerable,C6G,60,0,0.0,0.0,0.0602,1.0,1.0

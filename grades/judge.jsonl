@@ -1396,3 +1396,202 @@
 {"q_id": "T078", "condition": "C6", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Answer matches gold and label exactly"}
 {"q_id": "T079", "condition": "C6", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
 {"q_id": "T080", "condition": "C6", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP001", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP002", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Provides the drug type as a blood thinner/anticoagulant and correctly notes no brand name in the label"}
+{"q_id": "JP003", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "JP004", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP005", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP006", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches the known part and adds no unsupported information"}
+{"q_id": "JP007", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP008", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the gold answer's recommendation to closely monitor patients"}
+{"q_id": "JP009", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP010", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP011", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "JP012", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP013", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP014", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP015", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP016", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP017", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP018", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the guidance for patients on 2.5\u202fmg twice daily"}
+{"q_id": "JP019", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP020", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP021", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label without extra claims"}
+{"q_id": "JP022", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits that brand name is not provided in the label"}
+{"q_id": "JP023", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "unsupported_claim", "reason": "adds treatment and symptom details not in label"}
+{"q_id": "JP024", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP025", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "JP026", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP027", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP028", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP029", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP030", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP031", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "contradicts_gold", "reason": "System says Yes despite label stating no effect on mortality"}
+{"q_id": "JP032", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches the label's statement and adds no unsupported claims"}
+{"q_id": "JP033", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "unsupported_claim", "reason": "omits loss of appetite and adds specific arrhythmia types not in the label"}
+{"q_id": "JP034", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP035", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "unsupported_claim", "reason": "adds claim about symptoms at lower levels not supported by label"}
+{"q_id": "JP036", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches the known part and adds no unsupported info"}
+{"q_id": "JP037", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP038", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP039", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP040", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP041", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "unsupported_claim", "reason": "added cancer adjunct use not supported by the label"}
+{"q_id": "JP042", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Provides the known part from the label and does not add unsupported information"}
+{"q_id": "JP043", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "System correctly states levothyroxine can cause hair loss, matching the label"}
+{"q_id": "JP044", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP045", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "answered_unanswerable", "reason": "Incorrectly claims the label lacks the needed information"}
+{"q_id": "JP046", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP047", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP048", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP049", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP050", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP051", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label without extra claims"}
+{"q_id": "JP052", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP053", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "JP054", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP055", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP056", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP057", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP058", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP059", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP060", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP061", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "JP062", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP063", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "unsupported_claim", "reason": "includes dosage reduction and monitoring advice not in the label quote"}
+{"q_id": "JP064", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP065", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label without extra claims"}
+{"q_id": "JP066", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP067", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP068", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP069", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP070", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP071", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "unsupported_claim", "reason": "adds claim about reducing progression not supported by label"}
+{"q_id": "JP072", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "JP073", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP074", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP075", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP077", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP078", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "JP079", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Answer matches gold and quote, noting hyperkalemia risk and no specific potassium level"}
+{"q_id": "JP080", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N001", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label quote exactly"}
+{"q_id": "N002", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits that the label does not provide the mechanism of action"}
+{"q_id": "N003", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly with no extra claims"}
+{"q_id": "N004", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N005", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the required timing 'once daily with the evening meal'"}
+{"q_id": "N006", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the note that dose for children under 10 is not in the label"}
+{"q_id": "N007", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N008", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Provides the risk of lactic acidosis as stated in the label"}
+{"q_id": "N009", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "N010", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N011", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "fabricated_fact", "reason": "added unsupported claim about mortality reduction and omitted heart failure"}
+{"q_id": "N012", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "unsupported_claim", "reason": "added indications (AMI, heart failure) not supported by the label"}
+{"q_id": "N013", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "fabricated_fact", "reason": "omits cough and adds unsupported percentage figures"}
+{"q_id": "N014", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N015", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label exactly"}
+{"q_id": "N016", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "N017", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N018", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label quote exactly"}
+{"q_id": "N019", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the gold answer's recommendation to monitor serum lithium levels"}
+{"q_id": "N020", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N021", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "N022", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "N023", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "N024", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N025", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "Only mentions 10 or 20\u202fmg, omitting the full 10\u201120\u202fmg range"}
+{"q_id": "N026", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "N027", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N029", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "N030", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N031", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "unsupported_claim", "reason": "adds claim about reduced cardiovascular risk not in label"}
+{"q_id": "N032", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Provides the calcium channel blocker classification without unsupported brand name"}
+{"q_id": "N033", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label quote exactly"}
+{"q_id": "N034", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N035", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "N036", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "N037", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N038", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N039", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "N040", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T001", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "T002", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits that the label does not provide a timeline"}
+{"q_id": "T003", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T004", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T005", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "contradicts_gold", "reason": "claims the maximum dose is not specified despite the label stating 200\u202fmg"}
+{"q_id": "T006", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits that timing information is not provided in the label"}
+{"q_id": "T007", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T008", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the detail that sertraline may increase pimozide plasma levels"}
+{"q_id": "T009", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T010", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T011", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits bulimia nervosa indication"}
+{"q_id": "T012", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T013", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "Correctly says yes but omits the reported 16% vs 9% frequencies"}
+{"q_id": "T014", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T015", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T016", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T017", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T018", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "fabricated_fact", "reason": "adds unsupported 5\u2011week discontinuation interval not in label"}
+{"q_id": "T019", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits that insulin or oral diabetes medication doses may require adjustment"}
+{"q_id": "T020", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T021", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "T022", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits that label does not explain how gabapentin relieves nerve pain"}
+{"q_id": "T023", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "does not state that gabapentin can cause swelling or give the 8% vs 2% frequencies"}
+{"q_id": "T024", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T025", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer exactly"}
+{"q_id": "T026", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T027", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T028", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "fabricated_fact", "reason": "added unsupported 10% reduction claim"}
+{"q_id": "T029", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T030", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T031", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "includes both GERD with erosive esophagitis and Zollinger-Ellison syndrome as indicated"}
+{"q_id": "T032", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T033", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the placebo headache rate mentioned in the gold answer"}
+{"q_id": "T034", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T035", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T036", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T037", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T038", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "states the contraindication as in the label"}
+{"q_id": "T039", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T040", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T041", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label without extra claims"}
+{"q_id": "T042", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T043", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T044", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T045", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T046", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T047", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T048", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T049", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T050", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T051", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "matches gold answer"}
+{"q_id": "T052", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T053", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and makes no unsupported claims"}
+{"q_id": "T054", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T055", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T056", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T057", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T058", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T059", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T060", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T061", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the required susceptibility and organism specifics"}
+{"q_id": "T062", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T063", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and quote exactly"}
+{"q_id": "T064", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T065", "condition": "C6G", "judge": "rule", "grade": "over_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T066", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T067", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T068", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the label's note that the cause of increased rash incidence is unknown"}
+{"q_id": "T069", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T070", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T071", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer's conditions without unsupported additions"}
+{"q_id": "T072", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T074", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T075", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label"}
+{"q_id": "T076", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T077", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "T078", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "correct", "error_type": "none", "reason": "Matches gold answer and label without extra unsupported content"}
+{"q_id": "T079", "condition": "C6G", "judge": "rule", "grade": "refused_partial", "error_type": "none", "reason": "refused"}
+{"q_id": "T080", "condition": "C6G", "judge": "rule", "grade": "correct_refusal", "error_type": "none", "reason": "refused"}
+{"q_id": "N028", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "incomplete", "error_type": "none", "reason": "omits the reason to avoid large quantities (risk of increased levels and myopathy)"}
+{"q_id": "T073", "condition": "C6G", "judge": "openai/gpt-oss-120b", "grade": "hallucinated", "error_type": "fabricated_fact", "reason": "adds unsupported risk factors not in label"}

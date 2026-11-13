@@ -1,0 +1,9 @@
+group,first,second,questions,only_first_wrong,only_second_wrong,p,p_holm
+High + Critical,C5,C6,120,2,0,0.5,1.0
+High + Critical,C5,C6G,120,4,0,0.125,0.375
+High + Critical,C6,C6G,120,2,0,0.5,1.0
+High + Critical,C1,C6G,120,12,2,0.0129,0.0518
+Critical only,C5,C6,60,1,0,1.0,1.0
+Critical only,C5,C6G,60,3,0,0.25,0.75
+Critical only,C6,C6G,60,2,0,0.5,1.0
+Critical only,C1,C6G,60,5,0,0.0625,0.25
