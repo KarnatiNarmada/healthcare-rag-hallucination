@@ -91,15 +91,17 @@ python eval/make_figures.py     # report-ready figures (PNG) -> docs/figures/
 python -m streamlit run app/app.py
 ```
 
-Opens at `http://localhost:8501`.
+Opens at `http://localhost:8501`. Three pages:
 
-- **Ask a question:** pick a drug and a system version, ask a question, and see the answer, the risk level, the evidence
-  score, the label passages used and the checking steps. Needs Ollama running.
-- **Results:** the results by research question, computed from `grades/graded.csv`. Works without Ollama.
+- **Ask:** choose **FDA drug labeling** or **Uploaded document**, enter a question, and get an answer with its risk level,
+  evidence strength, citations (the label excerpts used) and, in Advanced settings, the verification level (C0 to C6).
+  Answers can be copied or downloaded. Needs Ollama running.
+- **Evaluation:** the experiment results by research question, computed from `grades/graded.csv`. Works without Ollama.
+- **Guide:** how to use the app and how to read its responses.
 
-- **Your own document (optional):** when the label has no answer, upload a .pdf, .docx or .txt (up to 5 MB) and ask the
-  same question of it. It is kept in memory for that visit only, is not added to the FDA index, and its answers are
-  marked as not verified. This feature was not part of the study.
+Uploaded document (optional): upload a .pdf, .docx or .txt file (up to 5 MB) and ask a question of it. The document is
+held in memory for that session only, is not added to the FDA index, and its answers are marked as not verified against
+FDA labeling. This feature is not part of the experiment.
 
 Several people can use the app at once. One local model answers one question at a time, so others wait in a shared
 queue (at most 10 waiting, 30 questions per visitor). A repeated question reuses its earlier answer (temperature 0 and a
@@ -134,7 +136,7 @@ Share of answers graded hallucinated, with the AI judge checked against a human 
 ## Repository layout
 
 ```
-app/        Streamlit app (ask a question, results)
+app/        Streamlit app (Ask, Evaluation, Guide)
 data/       drug list, downloaded labels, chunks, index
 docs/       report figures (docs/figures/)
 eval/       experiment, grading and analysis scripts
@@ -142,7 +144,7 @@ grades/     graded answers (graded.csv) and human grading sheets
 questions/  the 200 test questions and gold answers
 results/    raw answers per version
 scripts/    openFDA download and inspection helpers
-src/        chunking, indexing, retrieval, generation, the mitigation pipeline
+src/        chunking, indexing, retrieval, generation, the mitigation pipeline, uploaded-document search
 stats/      statistics tables
 ```
 
