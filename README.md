@@ -97,6 +97,10 @@ Opens at `http://localhost:8501`.
   score, the label passages used and the checking steps. Needs Ollama running.
 - **Results:** the results by research question, computed from `grades/graded.csv`. Works without Ollama.
 
+- **Your own document (optional):** when the label has no answer, upload a .pdf, .docx or .txt (up to 5 MB) and ask the
+  same question of it. It is kept in memory for that visit only, is not added to the FDA index, and its answers are
+  marked as not verified. This feature was not part of the study.
+
 Several people can use the app at once. One local model answers one question at a time, so others wait in a shared
 queue (at most 10 waiting, 30 questions per visitor). A repeated question reuses its earlier answer (temperature 0 and a
 fixed seed make answers repeatable). Nothing is written to disk and there are no user accounts.
